@@ -1,0 +1,144 @@
+body {
+    margin: 0; /* Usuwa domyślne marginesy */
+    min-height: 100vh; /* Ustawia minimalną wysokość na 100% wysokości widoku */
+    background: #2c3e50; /* Ustawia tło strony na kolor ciemny */
+    display: flex; /* Ustawia flexbox jako model układu */
+    flex-direction: column; /* Ustawia kierunek flexa na kolumnę */
+    align-items: center; /* Wyrównuje elementy w poziomie do środka */
+    color: #ecf0f1; /* Ustawia kolor tekstu na jasny */
+    font-family: Arial, sans-serif; /* Ustawia domyślną czcionkę */
+    font-size: 18px; /* Ustawia domyślny rozmiar czcionki */
+}
+
+.container {
+    width: 90%; /* Ustawia szerokość kontenera na 90% */
+    display: flex; /* Ustawia flexbox jako model układu */
+    flex-direction: column; /* Ustawia kierunek flexa na kolumnę */
+    align-items: center; /* Wyrównuje elementy w poziomie do środka */
+    margin-top: 80px; /* Dodaje margines górny */
+}
+
+.nav-container {
+    width: 100%; /* Ustawia szerokość na 100% */
+    position: fixed; /* Pozycjonowanie stałe */
+    top: 0; /* Ustawia górny margines na 0 */
+    left: 0; /* Ustawia lewy margines na 0 */
+    background-color: #2c3e50; /* Ustawia tło kontenera na ciemny kolor */
+    z-index: 1000; /* Ustawia wysoki indeks z-index dla nawigacji */
+    display: flex; /* Ustawia flexbox jako model układu */
+    justify-content: center; /* Wyrównuje elementy do środka w poziomie */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Dodaje cień pod nawigacją */
+    padding: 10px 0; /* Dodaje wewnętrzny margines góra-dół */
+}
+
+.nav {
+    display: flex; /* Ustawia flexbox jako model układu */
+    gap: 10px; /* Dodaje odstępy między linkami */
+}
+
+.nav a {
+    display: inline-block; /* Ustawia linki jako elementy blokowe w linii */
+    padding: 10px 20px; /* Dodaje wewnętrzny margines linków */
+    background-color: #16a085; /* Ustawia tło linków na zielone */
+    border-radius: 15px; /* Zaokrągla rogi linków */
+    text-decoration: none; /* Usuwa podkreślenie linków */
+    color: #ecf0f1; /* Ustawia kolor tekstu linków na jasny */
+    font-size: 18px; /* Ustawia rozmiar czcionki linków */
+    font-family: Impact, Charcoal, sans-serif; /* Ustawia czcionkę linków */
+    z-index: 10; /* Ustawia indeks z-index linków */
+    transition: all 0.3s ease; /* Dodaje płynne przejścia dla linków */
+}
+
+.nav a:hover {
+    transform: scale(1.1); /* Powiększa link przy najechaniu */
+    background-color: #1abc9c; /* Zmienia kolor tła linku przy najechaniu */
+}
+
+.nav a.active {
+    background-color: #2980b9; /* Ustawia inny kolor tła dla aktywnego linku */
+}
+
+#contentContainer {
+    position: absolute; /* Pozycjonowanie absolutne */
+    margin-left: -500px; /* Przesuwa w lewo */
+    margin-top: -500px; /* Przesuwa w górę */
+    left: 50%; /* Ustawia element na środku w poziomie */
+    top: 50%; /* Ustawia element na środku w pionie */
+    width: 1000px; /* Ustawia szerokość kontenera */
+    height: 1000px; /* Ustawia wysokość kontenera */
+}
+
+#carouselContainer {
+    position: absolute; /* Pozycjonowanie absolutne */
+    margin-left: -500px; /* Przesuwa w lewo */
+    margin-top: -500px; /* Przesuwa w górę */
+    left: 50%; /* Ustawia element na środku w poziomie */
+    top: 50%; /* Ustawia element na środku w pionie */
+    width: 1000px; /* Ustawia szerokość kontenera */
+    height: 1000px; /* Ustawia wysokość kontenera */
+}
+
+.carouselItem {
+    width: 320px; /* Ustawia szerokość elementu karuzeli */
+    height: 320px; /* Ustawia wysokość elementu karuzeli */
+    position: absolute; /* Pozycjonowanie absolutne */
+    left: 50%; /* Ustawia element na środku w poziomie */
+    top: 50%; /* Ustawia element na środku w pionie */
+    margin-left: -160px; /* Przesuwa w lewo */
+    margin-top: -160px; /* Przesuwa w górę */
+    visibility: hidden; /* Ukrywa element */
+}
+
+.carouselItemInner {
+    width: 100%; /* Ustawia szerokość wewnętrznego elementu karuzeli */
+    height: 100%; /* Ustawia wysokość wewnętrznego elementu karuzeli */
+    position: absolute; /* Pozycjonowanie absolutne */
+    background-color: rgba(255, 255, 255, .75); /* Ustawia tło z przezroczystością */
+    border: 10px solid rgba(255, 255, 255, .5); /* Ustawia obramowanie z przezroczystością */
+    left: 50%; /* Ustawia element na środku w poziomie */
+    top: 50%; /* Ustawia element na środku w pionie */
+    margin-left: -50%; /* Przesuwa w lewo */
+    margin-top: -50%; /* Przesuwa w górę */
+    text-align: center; /* Wyśrodkowuje tekst wewnątrz elementu */
+}
+
+.carouselItemInner img {
+    width: 100%; /* Ustawia szerokość obrazu na 100% */
+    height: 100%; /* Ustawia wysokość obrazu na 100% */
+    object-fit: cover; /* Ustawia dopasowanie obrazu */
+    display: block; /* Wyświetla obraz jako blokowy */
+    margin: auto; /* Wyśrodkowuje obraz */
+}
+
+.trans3d {
+    transform-style: preserve-3d; /* Ustawia styl transformacji 3D */
+    transform: translate3d(0, 0, 0); /* Ustawia pozycję 3D */
+}
+
+#toggleAnimation {
+    position: fixed; /* Pozycjonowanie stałe */
+    bottom: 60px; /* Ustawia odległość od dołu */
+    right: 20px; /* Ustawia odległość od prawej */
+    padding: 10px 20px; /* Dodaje wewnętrzny margines */
+    background-color: #16a085; /* Ustawia tło przycisku */
+    border: none; /* Usuwa obramowanie przycisku */
+    border-radius: 5px; /* Zaokrągla rogi przycisku */
+    color: #ecf0f1; /* Ustawia kolor tekstu przycisku */
+    font-size: 18px; /* Ustawia rozmiar czcionki przycisku */
+    cursor: pointer; /* Ustawia kursor na wskaźnik */
+}
+
+#toggleAnimation:hover {
+    background-color: #1abc9c; /* Zmienia kolor tła przycisku przy najechaniu */
+}
+
+.footer {
+    width: 100%; /* Ustawia szerokość na 100% */
+    background-color: #16a085; /* Ustawia tło stopki */
+    color: white; /* Ustawia kolor tekstu na biały */
+    text-align: center; /* Wyśrodkowuje tekst */
+    padding: 10px 0; /* Dodaje wewnętrzny margines góra-dół */
+    position: relative; /* Ustawia pozycjonowanie względne */
+    bottom: 0; /* Ustawia dolny margines na 0 */
+    margin-top: auto; /* Automatyczny margines górny */
+}

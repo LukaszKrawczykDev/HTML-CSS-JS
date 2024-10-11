@@ -1,0 +1,254 @@
+body {
+    margin: 0; /* Usuń margines wokół całego ciała */
+    min-height: 100vh; /* Minimalna wysokość 100% wysokości okna przeglądarki */
+    background: #2c3e50; /* Kolor tła */
+    display: flex; /* Ustawienie flexbox */
+    flex-direction: column; /* Ustawienie kierunku flexbox na kolumnę */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    color: #ecf0f1; /* Kolor tekstu */
+    font-family: Arial, sans-serif; /* Ustawienie czcionki */
+    font-size: 18px; /* Rozmiar czcionki */
+}
+
+.container {
+    width: 90%; /* Szerokość 90% */
+    display: flex; /* Ustawienie flexbox */
+    flex-direction: column; /* Kierunek flexbox na kolumnę */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    margin-top: 80px; /* Górny margines */
+}
+
+.nav-container {
+    width: 100%; /* Szerokość 100% */
+    position: fixed; /* Pozycjonowanie stałe */
+    top: 0; /* Góra strony */
+    left: 0; /* Lewa krawędź */
+    background-color: #2c3e50; /* Kolor tła */
+    z-index: 1000; /* Indeks z, aby element był na wierzchu */
+    display: flex; /* Ustawienie flexbox */
+    justify-content: center; /* Wyśrodkowanie elementów w osi poziomej */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Cień */
+    padding: 10px 0; /* Wewnętrzny margines */
+}
+
+.nav {
+    display: flex; /* Ustawienie flexbox */
+    gap: 10px; /* Odstępy między elementami */
+}
+
+.nav a {
+    display: inline-block; /* Element blokowy wewnątrz inline */
+    padding: 10px 20px; /* Wewnętrzny margines */
+    background-color: #16a085; /* Kolor tła */
+    border-radius: 15px; /* Zaokrąglenie narożników */
+    text-decoration: none; /* Brak podkreślenia tekstu */
+    color: #ecf0f1; /* Kolor tekstu */
+    font-size: 18px; /* Rozmiar czcionki */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka */
+    z-index: 10; /* Indeks z */
+    transition: all 0.3s ease; /* Animacja przejścia */
+}
+
+.nav a:hover {
+    transform: scale(1.1); /* Powiększenie przy najechaniu */
+    background-color: #1abc9c; /* Zmiana koloru tła przy najechaniu */
+}
+
+.nav a.active {
+    background-color: #2980b9; /* Kolor tła dla aktywnego linku */
+}
+
+.content {
+    width: 100%; /* Szerokość 100% */
+    background-color: #34495e; /* Kolor tła */
+    padding: 20px; /* Wewnętrzny margines */
+    box-sizing: border-box; /* Ustawienie box-sizing */
+    border-radius: 15px; /* Zaokrąglenie narożników */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cień */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.content h1 {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: #ecf0f1; /* Kolor tekstu */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka */
+    font-size: 28px; /* Rozmiar czcionki */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Dolny margines */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+.form-row {
+    display: flex; /* Ustawienie flexbox */
+    justify-content: space-between; /* Rozdzielenie elementów */
+}
+
+.form-group label {
+    display: block; /* Element blokowy */
+    margin-bottom: 5px; /* Dolny margines */
+    color: #ecf0f1; /* Kolor tekstu */
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%; /* Szerokość 100% */
+    padding: 10px; /* Wewnętrzny margines */
+    border: 1px solid #34495e; /* Ramka */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+    box-sizing: border-box; /* Ustawienie box-sizing */
+    font-size: 16px; /* Rozmiar czcionki */
+    background-color: #ecf0f1; /* Kolor tła */
+}
+
+.form-group input[type="radio"], .form-group input[type="checkbox"] {
+    width: auto; /* Automatyczna szerokość */
+    margin-right: 10px; /* Prawy margines */
+}
+
+button[type="submit"] {
+    padding: 10px 20px; /* Wewnętrzny margines */
+    background-color: #16a085; /* Kolor tła */
+    border: none; /* Brak ramki */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+    color: #ecf0f1; /* Kolor tekstu */
+    font-size: 18px; /* Rozmiar czcionki */
+    cursor: pointer; /* Wskaźnik kursora */
+}
+
+button[type="submit"]:hover {
+    background-color: #1abc9c; /* Zmiana koloru tła przy najechaniu */
+}
+
+#forum-entries {
+    width: 100%; /* Szerokość 100% */
+    margin-top: 20px; /* Górny margines */
+}
+
+#forum-entries h2 {
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka */
+    font-size: 24px; /* Rozmiar czcionki */
+    color: #ecf0f1; /* Kolor tekstu */
+}
+
+#filter-topic {
+    margin-bottom: 20px; /* Dolny margines */
+    padding: 10px; /* Wewnętrzny margines */
+    font-size: 16px; /* Rozmiar czcionki */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+    border: 1px solid #34495e; /* Ramka */
+}
+
+#entries-list {
+    list-style-type: none; /* Brak stylu listy */
+    padding: 0; /* Brak wewnętrznego marginesu */
+}
+
+#entries-list .entry-table {
+    width: 100%; /* Szerokość 100% */
+    background-color: #3b5998; /* Kolor tła */
+    margin: 10px 0; /* Górny i dolny margines */
+    padding: 10px; /* Wewnętrzny margines */
+    border-radius: 10px; /* Zaokrąglenie narożników */
+    color: #ecf0f1; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+    border-collapse: collapse; /* Złożenie ramki */
+}
+
+.entry-buttons {
+    display: flex; /* Ustawienie flexbox */
+    justify-content: space-between; /* Rozdzielenie elementów */
+    margin-top: 10px; /* Górny margines */
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px; /* Wewnętrzny margines */
+    border: none; /* Brak ramki */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+    cursor: pointer; /* Wskaźnik kursora */
+    margin-bottom: 5px;
+}
+
+.edit-btn {
+    background-color: #2980b9; /* Kolor tła */
+    color: #ecf0f1; /* Kolor tekstu */
+}
+
+.edit-btn:hover {
+    background-color: #3498db; /* Zmiana koloru tła przy najechaniu */
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Kolor tła */
+    color: #ecf0f1; /* Kolor tekstu */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Zmiana koloru tła przy najechaniu */
+}
+
+.comment-form {
+    margin-top: 10px; /* Górny margines */
+    background-color: #34495e; /* Kolor tła */
+    padding: 10px; /* Wewnętrzny margines */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+}
+
+.comments-list {
+    margin-top: 10px; /* Górny margines */
+}
+
+.comment {
+    background-color: #2c3e50; /* Kolor tła */
+    padding: 5px; /* Wewnętrzny margines */
+    border-radius: 5px; /* Zaokrąglenie narożników */
+    margin-top: 5px; /* Górny margines */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Brak wyświetlania */
+    position: fixed; /* Pozycjonowanie stałe */
+    z-index: 1001; /* Indeks z */
+    left: 0; /* Lewa krawędź */
+    top: 0; /* Góra strony */
+    width: 100%; /* Szerokość 100% */
+    height: 100%; /* Wysokość 100% */
+    overflow: auto; /* Przewijanie */
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+}
+
+.modal-content {
+    background-color: #34495e; /* Kolor tła */
+    margin: 15% auto; /* Automatyczny margines */
+    padding: 20px; /* Wewnętrzny margines */
+    border: 1px solid #888; /* Ramka */
+    width: 80%; /* Szerokość 80% */
+    border-radius: 10px; /* Zaokrąglenie narożników */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.close-modal {
+    color: #aaa; /* Kolor tekstu */
+    float: right; /* Wyrównanie do prawej */
+    font-size: 28px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie */
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000; /* Kolor tekstu przy najechaniu lub fokusu */
+    text-decoration: none; /* Brak podkreślenia tekstu */
+    cursor: pointer; /* Wskaźnik kursora */
+}
+
+.footer {
+    width: 100%; /* Szerokość 100% */
+    background-color: #16a085; /* Kolor tła */
+    color: white; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 10px 0; /* Wewnętrzny margines */
+    position: relative; /* Pozycjonowanie relatywne */
+    bottom: 0; /* Dolna krawędź */
+    margin-top: auto; /* Automatyczny górny margines */
+}

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../ŁukaszKrawczyk_Projekt"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ŁukaszKrawczyk_Projekt"
+	}
+}

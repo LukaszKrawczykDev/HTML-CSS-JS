@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"> <!-- Ustawienie kodowania znaków -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ustawienie viewportu dla responsywności -->
+    <title>Moje ulubione miasto - Warszawa</title> <!-- Tytuł strony -->
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" /> <!-- Odnośnik do pliku stylów -->
+    <link rel="stylesheet" href="lightbox2/css/lightbox.css" /> <!-- Odnośnik do stylów Lightbox -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Odnośnik do jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script> <!-- Odnośnik do jQuery Cycle Plugin -->
+    <script src="lightbox2/js/lightbox.js"></script> <!-- Odnośnik do skryptu Lightbox -->
+    <script src="JS/script.js"></script> <!-- Odnośnik do skryptu JS-->
+</head>
+<body>
+    <div class="baner"> <!-- Baner na górze strony -->
+        <div class="slideshow"> <!-- Slideshow z obrazami -->
+            <img src="zdj/tło1.jpg" alt="Zdjęcie 1"> <!-- Obraz w slideshow -->
+            <img src="zdj/tło2.jpg" alt="Zdjęcie 2"> 
+            <img src="zdj/tło3.jpg" alt="Zdjęcie 3"> 
+        </div>
+        <div class="title"> <!-- Tytuł w banerze -->
+            <div class="title2">
+                <a href="index.html">WARSZAWA</a> <!-- Link do strony głównej -->
+            </div>
+        </div>
+        <div class="nav"> <!-- Nawigacja w banerze -->
+            <a href="gastronomia.html">GASTRONOMIA</a> <!-- Link do strony Gastronomia -->
+            <a href="atrakcje.html" class="active">ATRAKCJE</a> <!-- Link do strony Atrakcje -->
+            <a href="main.html">HISTORIA</a> <!-- Link do strony Historia -->
+            <a href="main.html">Główna</a> <!-- Link do strony głównej -->
+            <a href="main.html">NOCLEGI</a> <!-- Link do strony Noclegi -->
+            <a href="forum.html">FORUM</a> <!-- Link do strony Forum -->
+            <a href="galeria.html">GALERIA</a> <!-- Link do strony Galeria -->
+        </div>
+    </div>
+    <div class="nav-container"> <!-- Kontener nawigacji, który pojawia się po przewinięciu strony -->
+        <div class="nav">
+            <a href="gastronomia.html">GASTRONOMIA</a> 
+            <a href="atrakcje.html">ATRAKCJE</a> 
+            <a href="main.html">HISTORIA</a> 
+            <a href="index.html">INTRO</a> 
+            <a href="main.html">NOCLEGI</a> 
+            <a href="forum.html">FORUM</a>
+            <a href="galeria.html">GALERIA</a> 
+        </div>
+    </div>
+    <div class="container"> <!-- Główny kontener zawartości -->
+        <div class="content"> <!-- Sekcja z zawartością strony -->
+            <h1>Atrakcje w Warszawie</h1> <!-- Główny nagłówek strony -->
+            <p>W Warszawie nie brakuje atrakcji turystycznych. Oprócz historycznych zabytków, takich jak Zamek Królewski czy Stare Miasto, warto odwiedzić nowoczesne centra kulturalne, takie jak Centrum Nauki Kopernik. Dla miłośników sztuki idealnym miejscem będzie Muzeum Narodowe oraz liczne galerie sztuki. Dla rodzin z dziećmi polecamy wizytę w warszawskim zoo lub w parkach tematycznych.</p>
+            <p>Spacerując po Warszawie, warto odwiedzić ogrody Saski i Ujazdowski, które oferują spokojne miejsce do odpoczynku z dala od zgiełku miasta. Wieczorem miasto ożywa dzięki wielu koncertom, spektaklom i festiwalom, które odbywają się przez cały rok. Warszawa jest również znana z licznych targów i bazarów, gdzie można kupić unikalne produkty i pamiątki.</p><!--opis-->
+            <div class="section"> 
+                <a href="zdj/zamek.jpg" data-lightbox="gallery" data-title="Zamek"> <!-- Link do obrazka z Lightbox -->
+                    <img src="zdj/zamek.jpg" alt="Zamek"> 
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.zamek-krolewski.pl/" target="_blank">Zamek Królewski</a></h2>
+                    <p>Zamek Królewski w Warszawie to jeden z najważniejszych zabytków w Polsce. Siedziba królów Polski oraz miejsce podpisania Konstytucji 3 Maja. Zamek oferuje bogatą kolekcję dzieł sztuki oraz wystawy tematyczne.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Zamek+Królewski+Warszawa', '_blank')">Przejdź do mapy</button> <!-- Link do mapy google-->
+                </div>
+            </div>
+
+            <div class="section">
+                <a href="zdj/zoo.jpg" data-lightbox="gallery" data-title="Zoo"> 
+                    <img src="zdj/zoo.jpg" alt="Warszawskie Zoo"> 
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://zoo.waw.pl" target="_blank">Warszawkie Zoo</a></h2>
+                    <p>Warszawskie Zoo, oficjalnie znane jako Miejski Ogród Zoologiczny w Warszawie, znajduje się na warszawskiej Pradze, przy ulicy Ratuszowej. Otwarty w 1928 roku, jest jednym z najstarszych ogrodów zoologicznych w Polsce. Zoo zajmuje powierzchnię około 40 hektarów i jest domem dla ponad 12 tysięcy zwierząt, reprezentujących około 500 gatunków. Można tu zobaczyć zarówno rodzime gatunki, jak i egzotyczne zwierzęta z różnych zakątków świata, w tym słonie, lwy, żyrafy, oraz wiele gatunków ptaków i gadów. Zoo oferuje liczne atrakcje edukacyjne i rekreacyjne dla odwiedzających w każdym wieku.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Zamek+Królewski+Warszawa', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+            
+            <div class="section"> 
+                <a href="zdj/centrumNauki.jpg" data-lightbox="gallery" data-title="Centrum Kultury i Nauki"> 
+                    <img src="zdj/centrumNauki.jpg" alt="Centrum Kultury i Nauki"> 
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.pkin.pl/" target="_blank">Pałac Kultury i Nauki</a></h2>
+                    <p>Pałac Kultury i Nauki to najwyższy budynek w Polsce i jeden z symboli Warszawy. W jego wnętrzach znajdują się teatry, kina, muzea oraz taras widokowy, z którego roztacza się widok na całą stolicę.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Pałac+Kultury+i+Nauki+Warszawa', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+            <div class="section"> 
+                <a href="zdj/muzeum.jpg" data-lightbox="gallery" data-title="Muzeum Narodowe"> 
+                    <img src="zdj/muzeum.jpg" alt="Muzeum Narodowe">
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.mnw.art.pl/" target="_blank">Muzeum Narodowe</a></h2>
+                    <p>Muzeum Narodowe w Warszawie posiada jedną z najbogatszych kolekcji sztuki w Polsce. W jego zbiorach znajdują się dzieła sztuki polskiej i światowej, od starożytności po współczesność.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Muzeum+Narodowe+Warszawa', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+            <div class="section">
+                <a href="zdj/łazienki.jpg" data-lightbox="gallery" data-title="Łazienki Królewskie"> 
+                    <img src="zdj/łazienki.jpg" alt="Łazienki Królewskie">
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.lazienki-krolewskie.pl/" target="_blank">Łazienki Królewskie</a></h2>
+                    <p>Łazienki Królewskie to zespół pałacowo-parkowy, który jest jednym z najpiękniejszych miejsc w Warszawie. Na terenie parku znajdują się Pałac na Wyspie, Teatr na Wyspie oraz wiele innych zabytkowych budynków.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Łazienki+Królewskie+Warszawa', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+            
+            <div class="section"> 
+                <a href="zdj/muzeum2.jpg" data-lightbox="gallery" data-title="Muzeum Powstania Warszawskiego"> 
+                    <img src="zdj/muzeum2.jpg" alt="Muzeum Powstania Warszawskiego">
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.1944.pl/" target="_blank">Muzeum Powstania Warszawskiego</a></h2>
+                    <p>Muzeum Powstania Warszawskiego to miejsce upamiętniające jedno z najważniejszych wydarzeń w historii Warszawy. Ekspozycje prezentują historię powstania z 1944 roku poprzez zdjęcia, filmy, relacje świadków oraz interaktywne wystawy.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Muzeum+Powstania+Warszawskiego', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+
+            <div class="section"> 
+                <a href="zdj/centrum2.jpg" data-lightbox="gallery" data-title="Centrum Nauki Kopernik">
+                    <img src="zdj/centrum2.jpg" alt="Centrum Nauki Kopernik"> 
+                </a>
+                <div class="section-text">
+                    <h2><a href="https://www.kopernik.org.pl/" target="_blank">Centrum Nauki Kopernik</a></h2>
+                    <p>Centrum Nauki Kopernik to jedno z najnowocześniejszych centrów nauki w Europie. Oferuje interaktywne wystawy, warsztaty oraz pokazy naukowe, które angażują i edukują odwiedzających w każdym wieku.</p>
+                    <button class="button-map" onclick="window.open('https://www.google.com/maps?q=Centrum+Nauki+Kopernik+Warszawa', '_blank')">Przejdź do mapy</button>
+                </div>
+            </div>
+            <div id="map-section" class="section" style="cursor: pointer;"> 
+                <div class="section-text"> 
+                    <h2>PRZEJDŹ DO MAPY WARSZAWY</h2> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <!-- Stopka strony -->
+        © 2024 Moje Ulubione Miasto - Warszawa. Wszystkie prawa zastrzeżone.
+    </div>
+    <div class="overlay">  <!--wyswietlenie mapy google-->
+        <button class="close-btn">X</button> <!-- Przycisk zamknięcia -->
+    </div>
+</body>
+</html>

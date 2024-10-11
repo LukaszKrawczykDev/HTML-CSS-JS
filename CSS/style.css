@@ -1,0 +1,334 @@
+body {
+    margin: 0; /* Usunięcie domyślnych marginesów */
+    min-height: 100vh; /* Ustawienie minimalnej wysokości na 100% wysokości widoku */
+    background: #2c3e50; /* Ciemniejsze tło body */
+    display: flex; /* Ustawienie kontenera jako flexbox */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    color: #ecf0f1; /* Jasna czcionka dla kontrastu */
+    font-family: Arial, sans-serif; /* Ustawienie czcionki dla body */
+    font-size: 18px; /* Zwiększenie rozmiaru tekstu */
+}
+
+.container {
+    width: 90%; /* Szerokość kontenera na 90% */
+    display: flex; /* Ustawienie kontenera jako flexbox */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    margin-top: 20px; /* Margines górny dla kontenera */
+}
+
+.baner {
+    width: 90%; /* Szerokość taka sama jak container */
+    height: 30vh; /* 30% wysokości ekranu */
+    overflow: hidden; /* Ukrycie elementów wychodzących poza kontener */
+    border: 2px solid #34495e; /* Ciemna ramka */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    box-sizing: border-box; /* Uwzględnienie ramki w wymiarach */
+    position: relative; /* Ustawienie pozycji względnej */
+    margin: 20px 0; /* Margines górny i dolny */
+}
+
+.slideshow {
+    width: 100%; /* Szerokość na 100% kontenera */
+    height: 100%; /* Wysokość na 100% kontenera */
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    top: 0; /* Ustawienie górnego marginesu na 0 */
+    left: 0; /* Ustawienie lewego marginesu na 0 */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    z-index: 1; /* Dodane aby warstwa była pod przyciskami */
+}
+
+.slideshow img {
+    width: 100%; /* Szerokość na 100% kontenera */
+    height: 100%; /* Wysokość na 100% kontenera */
+    display: none; /* Domyślnie ukrycie obrazów */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+}
+
+.slideshow img:first-child {
+    display: block; /* Wyświetlanie pierwszego obrazu */
+}
+
+.nav {
+    display: flex; /* Ustawienie kontenera na flexbox */
+    gap: 10px; /* Odstępy między przyciskami */
+    z-index: 10; /* Ustawienie nad obrazami */
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    bottom: 10px; /* Pozycja na dole baneru */
+    left: 50%; /* Wyśrodkowanie poziome */
+    transform: translateX(-50%); /* Wyśrodkowanie względem osi X */
+}
+
+.nav a {
+    display: inline-block; /* Wyświetlanie linków jako blokowych */
+    padding: 10px 20px; /* Dodanie wewnętrznych marginesów */
+    background-color: #16a085; /* Ciemne tło przycisków */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    color: #ecf0f1; /* Jasna czcionka przycisków */
+    font-size: 18px; /* Zwiększenie rozmiaru czcionki */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka dla linków */
+    z-index: 10; /* Ustawienie z-index */
+    transition: all 0.3s ease; /* Animacja przejścia */
+}
+
+.nav a:hover {
+    transform: scale(1.1); /* Powiększenie przycisku przy najechaniu */
+    background-color: #1abc9c; /* Zmiana koloru tła po najechaniu */
+}
+
+.nav a.active {
+    background-color: #2980b9; /* Kolor aktywnego przycisku */
+}
+
+.title {
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    bottom: 10px; /* Pozycja od dołu */
+    right: 10px; /* Pozycja od prawej strony */
+    color: white; /* Kolor czcionki */
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie czcionki */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka Impact */
+    z-index: 10; /* Ustawienie z-index */
+}
+
+.title2 a {
+    color: white; /* Kolor czcionki */
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    z-index: 10; /* Ustawienie z-index */
+}
+
+.content {
+    width: 100%; /* Szerokość na 100% */
+    background-color: #34495e; /* Ciemniejsze tło content */
+    padding: 20px; /* Wewnętrzne marginesy */
+    box-sizing: border-box; /* Uwzględnienie paddingu w wymiarach */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cień */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.content h1 {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: #ecf0f1; /* Kolor czcionki */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka */
+    font-size: 28px; /* Rozmiar czcionki */
+}
+
+.content h2>a {
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    color: white; /* Kolor czcionki */
+}
+
+.section {
+    display: flex; /* Ustawienie kontenera na flexbox */
+    flex-direction: row; /* Ułożenie elementów w rzędzie */
+    align-items: stretch; /* Dopasowanie wysokości obrazów i tekstu */
+    margin: 20px 0; /* Margines górny i dolny */
+    background-color: #5d6d7e; /* Jaśniejsze tło sekcji */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    padding: 20px; /* Wewnętrzne marginesy */
+    box-sizing: border-box; /* Uwzględnienie paddingu w wymiarach */
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse; /* Odwrócenie kierunku dla parzystych sekcji */
+}
+
+.section a {
+    width: 40%; /* Szerokość na 40% */
+    height: auto; /* Automatyczna wysokość */
+    border-radius: 15px; /* Zaokrąglone krawędzie */
+    margin: 0 20px; /* Margines z boków */
+    display: block; /* Wyświetlanie linków jako blokowych */
+}
+
+.section img {
+    width: 100%; /* Szerokość na 100% kontenera */
+    height: auto; /* Automatyczna wysokość */
+    border-radius: 15px; /* Zaokrąglone krawędzie */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    cursor: pointer; /* Wskaźnik kursora wskazuje na możliwość kliknięcia */
+}
+
+.section-text {
+    width: 60%; /* Szerokość na 60% */
+    background-color: #3b5998; /* Jaśniejsze tło dla section-text */
+    padding: 20px; /* Wewnętrzne marginesy */
+    border-radius: 15px; /* Zaokrąglone krawędzie */
+    display: flex; /* Ustawienie kontenera na flexbox */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    justify-content: center; /* Wyśrodkowanie treści w pionie */
+    align-items: center; /* Wyśrodkowanie treści w poziomie */
+    box-sizing: border-box; /* Uwzględnienie paddingu w wymiarach */
+}
+
+.section-text h2 {
+    width: 100%; /* Pełna szerokość nagłówka */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-family: Impact, Charcoal, sans-serif; /* Czcionka */
+    color: #ecf0f1; /* Kolor czcionki */
+    font-size: 24px; /* Rozmiar czcionki */
+    margin-bottom: 10px; /* Margines dolny */
+    text-transform: uppercase; /* Duże litery */
+}
+
+.section-text h2 a {
+    display: inline-block; /* Wyświetlanie linków jako blokowych */
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    color: white; /* Kolor czcionki */
+}
+
+.section p {
+    line-height: 1.6; /* Wysokość linii */
+    color: #bdc3c7; /* Kolor tekstu */
+    text-align: justify; /* Wyrównanie tekstu do obu krawędzi */
+}
+
+.footer {
+    width: 100%; /* Szerokość na 100% */
+    background-color: #16a085; /* Tło stopki */
+    color: white; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 10px 0; /* Wewnętrzne marginesy */
+    position: relative; /* Pozycja względna */
+    margin-top: 20px; /* Margines górny dla stopki */
+}
+
+.nav-container {
+    width: 100%; /* Szerokość na 100% */
+    position: fixed; /* Pozycjonowanie stałe */
+    top: 0; /* Wyrównanie do góry */
+    left: 0; /* Wyrównanie do lewej strony */
+    background-color: #2c3e50; /* Tło kontenera nawigacji */
+    z-index: 1000; /* Z-index */
+    display: none; /* Domyślnie ukryty */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Cień */
+    padding: 30px 0; /* Wewnętrzne marginesy góra-dół */
+}
+
+.nav-container .nav {
+    display: flex; /* Ustawienie kontenera na flexbox */
+    gap: 10px; /* Odstępy między przyciskami */
+    left: 50%; /* Wyśrodkowanie poziome */
+    transform: translateX(-50%); /* Wyśrodkowanie względem osi X */
+}
+
+.overlay {
+    position: fixed; /* Pozycjonowanie stałe */
+    top: 0; /* Wyrównanie do góry */
+    left: 0; /* Wyrównanie do lewej strony */
+    width: 100%; /* Szerokość na 100% */
+    height: 100%; /* Wysokość na 100% */
+    background: rgba(0, 0, 0, 0.8); /* Półprzezroczyste czarne tło */
+    display: flex; /* Ustawienie kontenera na flexbox */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    z-index: 1000; /* Z-index */
+    display: none; /* Domyślnie ukryty */
+    padding: 20px; /* Wewnętrzne marginesy */
+}
+
+.overlay iframe {
+    max-width: 90%; /* Maksymalna szerokość na 90% */
+    max-height: 80%; /* Maksymalna wysokość na 80% */
+    border-radius: 15px; /* Zaokrąglenie boków */
+}
+
+.close-btn {
+    position: absolute; /* Pozycjonowanie absolutne */
+    background: #e74c3c; /* Kolor tła */
+    color: white; /* Kolor czcionki */
+    padding: 10px; /* Wewnętrzne marginesy */
+    border: none; /* Brak ramki */
+    border-radius: 5px; /* Zaokrąglenie boków */
+    cursor: pointer; /* Wskaźnik kursora */
+    font-size: 18px; /* Rozmiar czcionki */
+    top: 20px; /* Odległość od góry */
+    right: 50px; /* Odległość od prawej strony */
+}
+
+.close-btn:hover {
+    background: #c0392b; /* Kolor tła po najechaniu */
+}
+
+#map-section .section-text {
+    width: 100%; /* Rozciągnięcie sekcji tekstu na całą szerokość */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Dodanie animacji */
+}
+
+#map-section .section-text:hover {
+    transform: scale(1.01); /* Powiększenie po najechaniu */
+    background-color: #1abc9c; /* Zmiana koloru tła po najechaniu */
+    color: #ecf0f1; /* Jasna czcionka przycisku */
+}
+
+.map-iframe {
+    border-radius: 15px; /* Zaokrąglenie rogów mapy */
+}
+
+.stats-table {
+    width: 100%; /* Szerokość na 100% */
+    margin: 20px 0; /* Margines górny i dolny */
+    border-collapse: collapse; /* Połączenie ramek komórek */
+    background-color: #3b5998; /* Tło tabeli */
+    color: #ecf0f1; /* Kolor tekstu */
+    border-radius: 15px; /* Zaokrąglenie boków */
+    overflow: hidden; /* Ukrycie elementów wychodzących poza tabelę */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.stats-table th, .stats-table td {
+    padding: 15px; /* Wewnętrzne marginesy */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.stats-table th {
+    background-color: #1abc9c; /* Tło nagłówków tabeli */
+}
+
+.section-map {
+    margin-right: 20px; /* Dodanie przerwy między mapą a tekstem */
+    flex-shrink: 0; /* Zapobiega kurczeniu się sekcji mapy */
+}
+
+.small-images {
+    display: flex; /* Ustawienie kontenera na flexbox */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+    gap: 10px; /* Odstępy między obrazkami */
+    margin-top: 20px; /* Margines górny */
+}
+
+.small-images img {
+    width: calc(100%/3); /* Szerokość na 1/3 kontenera */
+    max-height: 100px; /* Maksymalna wysokość 100px */
+    border-radius: 10px; /* Zaokrąglenie boków */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+}
+
+.button-map {
+    display: inline-block; /* Wyświetlanie przycisków jako blokowych */
+    padding: 10px 20px; /* Wewnętrzne marginesy */
+    background: linear-gradient(90deg, #1abc9c, #16a085); /* Gradient tła */
+    color: #ecf0f1; /* Kolor tekstu */
+    border: none; /* Brak ramki */
+    border-radius: 25px; /* Zaokrąglone rogi */
+    cursor: pointer; /* Wskaźnik kursora */
+    font-size: 18px; /* Rozmiar czcionki */
+    font-family: Arial, sans-serif; /* Czcionka */
+    transition: all 0.3s ease; /* Animacja przejścia */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    text-decoration: none; /* Brak podkreślenia tekstu */
+}
+
+.button-map:hover {
+    background: linear-gradient(90deg, #16a085, #1abc9c); /* Zmiana koloru tła przy najechaniu */
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Większy cień przy najechaniu */
+}

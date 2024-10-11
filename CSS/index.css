@@ -1,0 +1,196 @@
+body {
+    display: flex; /* Ustawienie elementu body jako kontener typu flex */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    margin: 0; /* Usunięcie domyślnych marginesów */
+    padding: 0; /* Usunięcie domyślnych wypełnień */
+}
+
+.title {
+    display: flex; /* Ustawienie elementu title jako kontener typu flex */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    width: 100%; /* Szerokość na 100% szerokości rodzica */
+    height: 100vh; /* Wysokość na 100% okna przeglądarki */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    justify-content: center; /* Wyśrodkowanie elementów w osi pionowej */
+    background-image: url("../zdj/tło3.jpg"); /* Ustawienie tła jako obraz */
+    background-size: cover; /* Pokrycie całego elementu bez zniekształceń */
+    background-position: center; /* Obraz w centrum elementu */
+    overflow: hidden; /* Ukrycie nadmiaru elementów wychodzących poza kontener */
+}
+
+.title2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Ustawienie rodziny czcionek */
+    font-size: 150px; /* Ustawienie rozmiaru czcionki */
+    color: white; /* Ustawienie koloru tekstu na biały */
+    text-shadow: 20px 20px 10px black; /* Dodanie cienia do tekstu: przesunięcie, rozmycie, kolor */
+    -webkit-text-stroke-width: 2px; /* Dodanie obramowania tekstu w przeglądarkach WebKit */
+    -webkit-text-stroke-color: black; /* Kolor obramowania tekstu */
+    display: flex; /* Ustawienie elementu jako flex */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+    animation: slideInFromTop 2s ease-out; /* Dodanie animacji wejścia z góry */
+}
+
+.title2 a {
+    display: flex; /* Ustawienie elementu a jako flex */
+    flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+    font-size: 50px; /* Ustawienie rozmiaru czcionki */
+    align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+}
+
+.nav {
+    display: flex; /* Ustawienie elementu nav jako flex */
+    flex-direction: row; /* Ułożenie elementów w jednym rzędzie */
+    justify-content: center; /* Wyśrodkowanie elementów w osi poziomej */
+    margin-top: 10px; /* Dodanie marginesu od góry */
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    bottom: 10%; /* Ustawienie odległości od dołu na 10% */
+    width: 100%; /* Ustawienie szerokości na 100% kontenera */
+    gap: 10px; /* Odstęp między elementami */
+    width: 90%; /* Szerokość na 90% kontenera */
+}
+
+.nav a {
+    flex: 1; /* Każdy przycisk ma taką samą szerokość */
+    padding: 10px 20px; /* Dodanie wewnętrznych marginesów */
+    margin: 0 5px; /* Dodanie marginesów z boków */
+    background-color: black; /* Ustawienie tła na czarne */
+    color: white; /* Ustawienie koloru tekstu na biały */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    border-radius: 15px; /* Zaokrąglenie narożników */
+    transition: transform 0.3s, font-size 0.3s; /* Płynna zmiana rozmiaru i przeskalowania */
+    display: flex; /* Ustawienie elementu jako flex */
+    align-items: center; /* Wyśrodkowanie elementów w osi pionowej */
+    justify-content: center; /* Wyśrodkowanie elementów w osi poziomej */
+}
+
+.nav a:hover {
+    font-size: 1.5em; /* Powiększenie tekstu wewnątrz przycisku na hover */
+    background-color: blue; /* Zmiana koloru tła przycisku na hover */
+}
+
+.nav a.glowna {
+    font-size: 1.3em; /* Powiększenie tekstu w przycisku głównym */
+    padding: 20px 30px; /* Powiększenie wewnętrznych marginesów */
+    flex: 1.5; /* Zwiększenie szerokości przycisku głównego */
+}
+
+@media (min-width: 768px) {
+    .nav a {
+        opacity: 0; /* Ukrycie elementów na początku */
+    }
+
+    .nav a.glowna {
+        opacity: 0; /* Ukrycie przycisku głównego na początku */
+        animation: slideInFromBottom 3s ease-out 3s forwards; /* Dodanie animacji wejścia od dołu */
+    }
+
+    /* Klucze animacji */
+    @keyframes slideInFromTop {
+        0% {
+            transform: translateY(-100%); /* Początkowa pozycja powyżej widocznego obszaru */
+            opacity: 0; /* Ukrycie elementu */
+        }
+        100% {
+            transform: translateY(0); /* Końcowa pozycja */
+            opacity: 1; /* Pokazanie elementu */
+        }
+    }
+
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(100%); /* Początkowa pozycja poniżej widocznego obszaru */
+            opacity: 0; /* Ukrycie elementu */
+        }
+        100% {
+            transform: translateY(0); /* Końcowa pozycja */
+            opacity: 1; /* Pokazanie elementu */
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%); /* Początkowa pozycja poza widocznym obszarem po lewej */
+            opacity: 0; /* Ukrycie elementu */
+        }
+        100% {
+            transform: translateX(0); /* Końcowa pozycja */
+            opacity: 1; /* Pokazanie elementu */
+        }
+    }
+
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(100%); /* Początkowa pozycja poza widocznym obszarem po prawej */
+            opacity: 0; /* Ukrycie elementu */
+        }
+        100% {
+            transform: translateX(0); /* Końcowa pozycja */
+            opacity: 1; /* Pokazanie elementu */
+        }
+    }
+
+    .nav a.left:nth-child(1) {
+        animation: slideInFromLeft 3s ease-out 3s forwards; /* Dodanie animacji wejścia z lewej */
+    }
+
+    .nav a.left:nth-child(2) {
+        animation: slideInFromLeft 3s ease-out 1.5s forwards; /* Dodanie animacji wejścia z lewej z opóźnieniem */
+    }
+
+    .nav a.left:nth-child(3) {
+        animation: slideInFromLeft 3s ease-out 0s forwards; /* Dodanie animacji wejścia z lewej bez opóźnienia */
+    }
+
+    .nav a.right:nth-child(5) {
+        animation: slideInFromRight 3s ease-out 0s forwards; /* Dodanie animacji wejścia z prawej */
+    }
+
+    .nav a.right:nth-child(6) {
+        animation: slideInFromRight 3s ease-out 1.5s forwards; /* Dodanie animacji wejścia z prawej z opóźnieniem */
+    }
+
+    .nav a.right:nth-child(7) {
+        animation: slideInFromRight 3s ease-out 3s forwards; /* Dodanie animacji wejścia z prawej z większym opóźnieniem */
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        width: 100%; /* Szerokość na 100% */
+        height: auto; /* Automatyczna wysokość */
+        min-height: 100vh; /* Minimalna wysokość na 100% okna przeglądarki */
+        margin: 0; /* Usunięcie marginesów */
+        padding: 0; /* Usunięcie wypełnień */
+        display: flex; /* Ustawienie elementu jako flex */
+        flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+        align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+        justify-content: center; /* Wyśrodkowanie elementów w osi pionowej */
+        font-size: 5vw; /* Ustawienie rozmiaru czcionki w jednostkach viewport width */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        padding: 0 5vw; /* Dodanie paddingu po bokach dla lepszej czytelności */
+    }
+
+    .title2 {
+        font-size: 15vw; /* Ustawienie rozmiaru czcionki w jednostkach viewport width */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        padding: 0 5vw; /* Dodanie paddingu po bokach dla lepszej czytelności */
+    }
+
+    .nav {
+        width: 100%; /* Szerokość na 100% */
+        display: flex; /* Ustawienie elementu jako flex */
+        flex-direction: column; /* Ułożenie elementów jeden pod drugim */
+        align-items: center; /* Wyśrodkowanie elementów w osi poziomej */
+        margin-top: 20px; /* Dodanie marginesu od góry */
+        position: static; /* Pozycjonowanie statyczne */
+    }
+
+    .nav a {
+        margin: 5px 0; /* Dodanie marginesów w osi pionowej */
+        width: 80%; /* Szerokość na 80% */
+        box-sizing: border-box; /* Wliczenie marginesów do szerokości */
+    }
+}

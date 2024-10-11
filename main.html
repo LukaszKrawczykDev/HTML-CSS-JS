@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"> <!-- Ustawienie kodowania znaków -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ustawienie viewportu dla responsywności -->
+    <title>Moje ulubione miasto - Warszawa</title> <!-- Tytuł strony -->
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" /> <!-- Odnośnik do pliku stylów -->
+    <link rel="stylesheet" href="lightbox2/css/lightbox.css" /> <!-- Odnośnik do stylów Lightbox -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Odnośnik do jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js" 
+    <script src="JS/script.js"></script> <!-- Odnośnik do skryptu JS-->
+</head>
+<body>
+    <div class="baner"> <!-- Baner na górze strony -->
+        <div class="slideshow"> <!-- Slideshow z obrazami -->
+            <img src="zdj/tło1.jpg" alt="Zdjęcie 1"> <!-- Obraz w slideshow -->
+            <img src="zdj/tło2.jpg" alt="Zdjęcie 2"> =
+            <img src="zdj/tło3.jpg" alt="Zdjęcie 3">=
+        </div>
+        <div class="title"> <!-- Tytuł w banerze -->
+            <div class="title2">
+                <a href="index.html">WARSZAWA</a> <!-- Link do strony głównej -->
+            </div>
+        </div>
+        <div class="nav"> <!-- Nawigacja w banerze -->
+            <a href="gastronomia.html">GASTRONOMIA</a> <!-- Link do strony Gastronomia -->
+            <a href="atrakcje.html">ATRAKCJE</a> <!-- Link do strony Atrakcje -->
+            <a href="main.html">HISTORIA</a> <!-- Link do strony Historia (tak naprawdę do strony głównej) -->
+            <a href="index.html">INTRO</a> <!-- Link do strony głównej -->
+            <a href="main.html">NOCLEGI</a> <!-- Link do strony Noclegi (tak naprawdę do do strony głównej)-->
+            <a href="forum.html">FORUM</a> <!-- Link do strony Forum -->
+            <a href="galeria.html">GALERIA</a> <!-- Link do strony Galeria -->
+        </div>
+    </div>
+    <div class="nav-container"> <!-- Kontener nawigacji, który pojawia się po przewinięciu strony -->
+        <div class="nav"> 
+            <a href="gastronomia.html">GASTRONOMIA</a> 
+            <a href="atrakcje.html">ATRAKCJE</a> 
+            <a href="main.html">HISTORIA</a> 
+            <a href="index.html">INTRO</a> 
+            <a href="main.html">NOCLEGI</a> 
+            <a href="forum.html">FORUM</a> 
+            <a href="galeria.html">GALERIA</a> 
+        </div>
+    </div>
+    <div class="container"> <!-- Główny kontener zawartości -->
+        <div class="content"> <!-- Sekcja z zawartością strony -->
+            <h1>WITAJ W WARSZAWIE</h1> <!-- Główny nagłówek strony -->
+            <p>Warszawa, stolica Polski, to dynamiczne miasto o bogatej historii i kulturze. Znajdziesz tu wiele zabytków, muzeów, teatrów oraz nowoczesnych budynków, które tworzą niepowtarzalny klimat. To tutaj znajduje się Zamek Królewski, Pałac Kultury i Nauki, a także słynne Łazienki Królewskie. Warszawa to także centrum biznesowe i edukacyjne, gdzie swoje siedziby mają największe firmy i uniwersytety w Polsce. Odkryj różnorodność tego miasta, jego kulinarną scenę, liczne wydarzenia kulturalne oraz przyjaznych mieszkańców.</p> <!-- Opis Warszawy -->
+            
+            <div class="section"> <!-- Sekcja dla Gastronomii -->
+                <a href="zdj/gastronomia.jpg" data-lightbox="gallery" data-title="Gastronomia"> <!-- Link do obrazka z Lightbox -->
+                    <img src="zdj/gastronomia.jpg" alt="Gastronomia"> <!-- Obrazek Gastronomia -->
+                </a>
+                <div class="section-text"> <!-- Tekst sekcji Gastronomia -->
+                    <h2><a href="gastronomia.html">GASTRONOMIA</a></h2> 
+                    <p>Warszawa to raj dla miłośników dobrego jedzenia. Znajdziesz tu szeroki wybór restauracji, kawiarni i barów serwujących zarówno tradycyjne polskie potrawy, jak i dania z całego świata. Od luksusowych restauracji po przytulne bistro – każdy znajdzie coś dla siebie. Nie można zapomnieć o słynnych warszawskich pierogach i sernikach, które zachwycą każdego smakosza.</p> 
+                    <p>Na warszawskich ulicach czeka na ciebie również szeroki wybór food trucków oferujących różnorodne dania, od azjatyckich przysmaków po meksykańskie tacos. Warszawa to także miasto pełne kawiarni, gdzie można skosztować aromatycznej kawy oraz pysznych deserów. Niezależnie od twoich preferencji kulinarnej, Warszawa na pewno cię nie zawiedzie.</p> 
+                </div>
+            </div>
+            
+            <div class="section"> <!-- Sekcja dla Atrakcji -->
+                <a href="zdj/atrakcje.jpg" data-lightbox="gallery" data-title="Atrakcje"> 
+                    <img src="zdj/atrakcje.jpg" alt="Atrakcje"> 
+                </a>
+                <div class="section-text"> 
+                    <h2><a href="atrakcje.html">ATRAKCJE</a></h2>
+                    <p>W Warszawie nie brakuje atrakcji turystycznych. Oprócz historycznych zabytków, takich jak Zamek Królewski czy Stare Miasto, warto odwiedzić nowoczesne centra kulturalne, takie jak Centrum Nauki Kopernik. Dla miłośników sztuki idealnym miejscem będzie Muzeum Narodowe oraz liczne galerie sztuki. Dla rodzin z dziećmi polecamy wizytę w warszawskim zoo lub w parkach tematycznych.</p>
+                    <p>Spacerując po Warszawie, warto odwiedzić ogrody Saski i Ujazdowski, które oferują spokojne miejsce do odpoczynku z dala od zgiełku miasta. Wieczorem miasto ożywa dzięki wielu koncertom, spektaklom i festiwalom, które odbywają się przez cały rok. Warszawa jest również znana z licznych targów i bazarów, gdzie można kupić unikalne produkty i pamiątki.</p>
+                </div>
+            </div>
+            
+            <div class="section"> <!--Sekcja dla Historii-->
+                <a href="zdj/historia.jpg" data-lightbox="gallery" data-title="Historia">
+                    <img src="zdj/historia.jpg" alt="Historia">
+                </a>
+                <div class="section-text">
+                    <h2><a href="historia.html">HISTORIA</a></h2>
+                    <p>Warszawa to miasto o bogatej historii. Podczas II wojny światowej miasto zostało prawie całkowicie zniszczone, ale dzięki determinacji mieszkańców zostało odbudowane. Spacerując po ulicach Warszawy, można zobaczyć ślady przeszłości w postaci pomników, muzeów i historycznych budynków. Szczególnie warto odwiedzić Muzeum Powstania Warszawskiego, które upamiętnia bohaterski zryw mieszkańców w 1944 roku.</p>
+                    <p>Warto również odwiedzić historyczne dzielnice Warszawy, takie jak Praga, która zachowała wiele oryginalnych budynków i ma niepowtarzalny klimat. Innym interesującym miejscem jest Powązki, najstarszy cmentarz w Warszawie, gdzie spoczywają wybitni Polacy. Historia Warszawy jest żywa i wciąż obecna, dzięki licznym muzeom, pomnikom i zabytkom rozproszonym po całym mieście.</p> 
+                </div>
+            </div>
+            
+            <div class="section"> <!-- Sekcja dla Noclegów -->
+                <a href="zdj/noclegi.jpg" data-lightbox="gallery" data-title="Noclegi"> 
+                    <img src="zdj/noclegi.jpg" alt="Noclegi"> 
+                </a>
+                <div class="section-text"> 
+                    <h2><a href="noclegi.html">NOCLEGI</a></h2>
+                    <p>W Warszawie znajdziesz szeroką ofertę noclegową – od luksusowych hoteli, przez przytulne pensjonaty, aż po hostele dla podróżników z mniejszym budżetem. Niezależnie od preferencji i zasobów finansowych, każdy znajdzie tu odpowiednie miejsce na odpoczynek po dniu pełnym wrażeń.</p>
+                    <p>Dla tych, którzy szukają bardziej unikalnych doświadczeń, Warszawa oferuje również apartamenty na wynajem w historycznych kamienicach oraz nowoczesne, designerskie hotele. Miłośnicy natury mogą skorzystać z kempingów położonych w okolicznych parkach narodowych. Niezależnie od wyboru, noclegi w Warszawie zapewnią komfort i wygodę.</p> 
+                </div>
+            </div>
+            
+            <div class="section"> <!-- Sekcja dla Forum -->
+                <a href="zdj/forum.jpg" data-lightbox="gallery" data-title="Forum"> 
+                    <img src="zdj/forum.jpg" alt="Forum">
+                </a>
+                <div class="section-text">
+                    <h2><a href="forum.html">FORUM</a></h2>
+                    <p>Forum to idealne miejsce dla tych, którzy chcą podzielić się swoimi doświadczeniami z pobytu w Warszawie, uzyskać porady od innych podróżników lub po prostu porozmawiać o tym niesamowitym mieście. Dołącz do naszej społeczności i odkryj Warszawę na nowo!</p>
+                    <p>Na forum znajdziesz także rekomendacje dotyczące najlepszych restauracji, hoteli i atrakcji turystycznych. Możesz również dowiedzieć się o nadchodzących wydarzeniach i festiwalach oraz nawiązać kontakty z mieszkańcami i innymi podróżnikami. Społeczność jest pełna pasjonatów Warszawy, którzy chętnie podzielą się swoimi wskazówkami i radami.</p>
+                </div>
+            </div>
+            
+            <div class="section"> <!-- Sekcja dla Galerii -->
+                <a href="zdj/galeria.jpg" data-lightbox="gallery" data-title="Galeria">
+                    <img src="zdj/galeria.jpg" alt="Galeria">
+                </a>
+                <div class="section-text">
+                    <h2><a href="galeria.html">GALERIA</a></h2>
+                    <p>Zapraszam galerii, gdzie znajdziesz zdjęcia przedstawiające najpiękniejsze zakątki Warszawy. Od urokliwych uliczek Starego Miasta, przez zielone parki, aż po nowoczesne drapacze chmur – Warszawa zachwyca swoją różnorodnością i niepowtarzalnym klimatem.</p>
+                </div>
+            </div>
+
+            <div id="map-section" class="section" style="cursor: pointer;"> <!-- Sekcja dla Mapy Warszawy -->
+                <div class="section-text">
+                    <h2>PRZEJDŹ DO MAPY WARSZAWY</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <!-- Stopka strony -->
+        © 2024 Moje Ulubione Miasto - Warszawa. Wszystkie prawa zastrzeżone.
+    </div>
+    <!--wyswietlenie mapy google-->
+    <div class="overlay"> 
+        <button class="close-btn">X</button> <!-- Przycisk zamknięcia -->
+    </div>
+</body>
+</html>

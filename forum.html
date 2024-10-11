@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl"> <!-- Określa język dokumentu jako polski -->
+<head>
+    <meta charset="UTF-8"> <!-- Ustawia kodowanie znaków na UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ustawia viewport dla responsywnego designu -->
+    <title>Forum Warszawa</title> <!-- Tytuł strony, wyświetlany na karcie przeglądarki -->
+    <link rel="stylesheet" type="text/css" href="CSS/forum.css" /> <!-- Odnośnik do pliku stylów -->
+    <link rel="stylesheet" href="lightbox2/css/lightbox.css" /> <!-- Odnośnik do stylów Lightbox -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Odnośnik do jQuery -->
+    <script src="lightbox2/js/lightbox.js"></script><!-- Odnośnik do skryptu Lightbox -->
+    <script src="JS/script.js"></script> <!-- Odnośnik do skryptu JS-->
+</head>
+<body>
+    <div class="nav-container"> <!-- Kontener dla nawigacji -->
+        <div class="nav"> <!-- Nawigacja strony -->
+            <a href="gastronomia.html">GASTRONOMIA</a> <!-- Link do strony "Gastronomia" -->
+            <a href="atrakcje.html">ATRAKCJE</a> <!-- Link do strony "Atrakcje" -->
+            <a href="historia.html">HISTORIA</a> <!-- Link do strony "Historia" -->
+            <a href="main.html">GŁÓWNA</a> <!-- Link do strony głównej -->
+            <a href="noclegi.html">NOCLEGI</a> <!-- Link do strony "Noclegi" -->
+            <a href="forum.html" class="active">FORUM</a> <!-- Link do strony "Forum", aktywny link -->
+            <a href="galeria.html">GALERIA</a> <!-- Link do strony "Galeria" -->
+        </div>
+    </div>
+    <div class="container"> <!-- Główny kontener strony -->
+        <div class="content"> <!-- Kontener dla zawartości strony -->
+            <h1>Forum Warszawa</h1> <!-- Nagłówek strony -->
+            <p>Podziel się swoimi doświadczeniami, zadaj pytania i uzyskaj porady od innych użytkowników!</p> 
+
+            <form id="forum-form"> <!-- Formularz do dodawania wpisów na forum -->
+                <div class="form-group"> <!-- Grupa elementów formularza -->
+                    <label for="first-name">Imię:</label> <!-- Etykieta dla pola imienia -->
+                    <input type="text" id="first-name" name="first-name" required> <!-- Pole tekstowe do wprowadzenia imienia -->
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Nazwisko:</label> <!-- Etykieta dla pola nazwiska -->
+                    <input type="text" id="last-name" name="last-name" required> <!-- Pole tekstowe do wprowadzenia nazwiska -->
+                </div>
+                <div class="form-group">
+                    <label>Płeć:</label> <!-- Etykieta dla wyboru płci -->
+                    <label><input type="radio" name="gender" value="male" required> Mężczyzna</label> <!-- Opcja płci męskiej -->
+                    <label><input type="radio" name="gender" value="female"> Kobieta</label> <!-- Opcja płci żeńskiej -->
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label> <!-- Etykieta dla pola email -->
+                    <input type="email" id="email" name="email" required> <!-- Pole tekstowe do wprowadzenia emaila -->
+                </div>
+                <div class="form-group">
+                    <label for="topic">Wybierz temat:</label> <!-- Etykieta dla wyboru tematu -->
+                    <select id="topic" name="topic" required> <!-- Lista rozwijana do wyboru tematu -->
+                        <option value="general">Luźny wpis</option> 
+                        <option value="gastronomia">Gastronomia</option> 
+                        <option value="atrakcje">Atrakcje</option> 
+                        <option value="nocleg">Nocleg</option>
+                    </select>
+                </div>
+                <div class="form-group" id="rating-group" style="display: none;"> <!-- Grupa elementów formularza do oceny miejsca, ukryta domyślnie -->
+                    <label for="rating">Czy chcesz ocenić miejsce?</label> <!-- Etykieta dla oceny miejsca -->
+                    <select id="rating" name="rating"> <!-- Lista rozwijana do wyboru oceny -->
+                        <option value="">Nie</option> 
+                        <option value="5">5 - Świetne</option> 
+                        <option value="4">4 - Bardzo dobre</option> 
+                        <option value="3">3 - Dobre</option> 
+                        <option value="2">2 - Przeciętne</option> 
+                        <option value="1">1 - Słabe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Wiadomość:</label> <!-- Etykieta dla pola wiadomości -->
+                    <textarea id="message" name="message" required></textarea> <!-- Pole tekstowe do wprowadzenia wiadomości -->
+                </div>
+                <div class="form-group">
+                    <label for="photo">Dodaj zdjęcie:</label> <!-- Etykieta dla dodawania zdjęcia -->
+                    <input type="file" id="photo" name="photo" accept="image/*"> <!-- Pole do dodania zdjęcia -->
+                </div>
+                <button type="submit">Wyślij</button> <!-- Przycisk do wysłania formularza -->
+            </form>
+
+            <div id="forum-entries"> <!-- Sekcja dla wpisów użytkowników -->
+                <h2>Wpisy użytkowników</h2> <!-- Nagłówek sekcji wpisów -->
+                <label for="filter-topic">Filtruj po temacie:</label> <!-- Etykieta dla filtru tematu -->
+                <select id="filter-topic"> <!-- Lista rozwijana do filtrowania wpisów po temacie -->
+                    <option value="all">Wszystkie</option> 
+                    <option value="general">Luźny wpis</option> 
+                    <option value="gastronomia">Gastronomia</option> 
+                    <option value="atrakcje">Atrakcje</option> 
+                    <option value="nocleg">Nocleg</option>
+                </select>
+                <ul id="entries-list"> <!-- Lista wpisów użytkowników -->
+                    <!-- Wpisy będą tutaj dodawane dynamicznie -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <!-- Stopka strony -->
+        © 2024 Moje Ulubione Miasto - Warszawa. Wszystkie prawa zastrzeżone. <!-- Treść stopki -->
+    </div>
+
+    <!-- Modal - wyskakujące okno do weryfikacji wprowadzonych danych -->
+    <div id="confirmation-modal" class="modal"> <!-- Modal do potwierdzania danych -->
+        <div class="modal-content"> <!-- Treść modalu -->
+            <span class="close-modal">&times;</span> <!-- Przyciski zamykania modalu -->
+            <h2>Potwierdzenie danych</h2> <!-- Nagłówek modalu -->
+            <p id="confirmation-details"></p> <!-- Sekcja szczegółów potwierdzenia -->
+            <button id="confirm-submit">Potwierdź</button> <!-- Przycisk potwierdzenia -->
+        </div>
+    </div>
+</body>
+</html>

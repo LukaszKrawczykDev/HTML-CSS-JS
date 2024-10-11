@@ -1,0 +1,1 @@
+Proszę o otwarcie pliku index.html a następnie po załadowaniu animacji wybraniu przycisku strona główna.
